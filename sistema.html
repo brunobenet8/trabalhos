@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+    <title>Sistema</title>
+</head>
+<header>
+    <div class="row">
+    <img src="https://images.vexels.com/media/users/3/135553/isolated/preview/fe1680d9e81708fd79fc27b791401673---cone-de-calculadora-plana-by-vexels.png" width="46px" height="46px"> <h3>Calculadora de Materiais</h3>
+</div>
+</header>
+<body>
+    <div class="container">
+        <div class="row">
+         <div class="col-md-3">
+         </div>
+         <div class="col-sm-12 col-md-6">
+          <div class="card fluid">
+              <header><h4>Formulario</h4></header>
+            <select name="" id="modelo">
+                <option value="1">Modelo 1</option>
+                <option value="2">Modelo 2</option>
+                <option value="3">Modelo 3</option>
+                <option value="4">Modelo 4</option>
+            </select>
+            <input id="qtde" type="number" placeholder="Quantidade">
+            <button onclick="teste()"><span class="icon-edit"></span> Calcular</button>
+          </div>        
+         </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">            
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <table>
+                    <thead>
+                        <th>Peca 1</th>
+                        <th>Peca 2</th>
+                        <th>Peca 3</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="mat1">0</td>
+                            <td id="mat2">0</td>
+                            <td id="mat3">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer style="position:absolute; bottom:0%; width: 98.5%">
+            <span class="icon-home"></span>Calculadora de Materias <mark>Produzido por C1O</mark>
+    </footer>
+</body>
+<script>
+function teste(){
+    var mate1 = 0;
+    var mate2 = 0;
+    var mate3 = 0;
+    var qtde = document.getElementById("qtde").value;
+    if(document.getElementById("modelo").value === "1"){
+        document.getElementById("mat1").textContent = "" + (qtde/100);
+        document.getElementById("mat2").textContent = "" + (qtde/850);
+        document.getElementById("mat3").textContent = "" + (qtde/330);
+    }else if(document.getElementById("modelo").value === "2"){
+        document.getElementById("mat1").textContent = "" + (qtde/150);
+        document.getElementById("mat2").textContent = "" + (qtde/650);
+        document.getElementById("mat3").textContent = "" + (qtde/310);
+    }else if(document.getElementById("modelo").value === "3"){
+        document.getElementById("mat1").textContent = "" + (qtde/120);
+        document.getElementById("mat2").textContent = "" + (qtde/710);
+        document.getElementById("mat3").textContent = "" + (qtde/350);
+    }else if(document.getElementById("modelo").value === "4"){
+        document.getElementById("mat1").textContent = "" + (qtde/105);
+        document.getElementById("mat2").textContent = "" + (qtde/850);
+        document.getElementById("mat3").textContent = "" + (qtde/340);
+    }    
+}
+</script>
+</html>
